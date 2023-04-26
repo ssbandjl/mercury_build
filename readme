@@ -4,3 +4,10 @@ export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/xb/project/stor/daos/origin/docker/d
 
 cd /home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/mercury/05_bulk
 make
+
+daos同步:
+rsync -rapvu /opt/daos root@182.200.53.61:/opt/
+
+
+bulk
+mercury/05_bulk/server.c -> main

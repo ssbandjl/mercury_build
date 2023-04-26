@@ -33,7 +33,7 @@ int main(int argc, char** argv)
     const char* server_address = argv[1];
 
     server_state state; // Instance of the server's state
-
+    HG_Set_log_level("debug"); // warning|debug
     state.hg_class = HG_Init(server_address, HG_TRUE); // server init
     assert(state.hg_class != NULL);
 
