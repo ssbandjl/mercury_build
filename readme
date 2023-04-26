@@ -1,0 +1,6 @@
+编译bulk:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64/:/opt/daos/prereq/debug/mercury/lib/:/opt/daos/prereq/debug/mercury/include/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury.build/src/na:/home/xb/project/stor/daos/origindocker/daos/build/external/debug/mercury.build/src:/home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/src:/home/xb/project/stor/daos/origindocker/daos/build/external/debug/mercury/src/na:/home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/src/util:/home/xb/project/stor/daosorigin/docker/daos/build/external/debug/mercury/src/proc_extra
+
+cd /home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/mercury/05_bulk
+make
