@@ -1,0 +1,20 @@
+编译bulk:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64/:/opt/daos/prereq/debug/mercury/lib/:/opt/daos/prereq/debug/mercury/include/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury.build/src/na:/home/xb/project/stor/daos/origindocker/daos/build/external/debug/mercury.build/src:/home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/src:/home/xb/project/stor/daos/origindocker/daos/build/external/debug/mercury/src/na:/home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/src/util:/home/xb/project/stor/daosorigin/docker/daos/build/external/debug/mercury/src/proc_extra
+
+cd /home/xb/project/stor/daos/origin/docker/daos/build/external/debug/mercury/mercury/05_bulk
+make
+
+daos同步:
+rsync -rapvu /opt/daos root@182.200.53.61:/opt/
+
+
+bulk
+mercury/05_bulk/server.c -> main
+
+编译mercury:
+Running commands in /home/daos/docker/daos/build/external/debug/mercury.build
+cd /home/daos/docker/daos/build/external/debug/mercury.build
+cmake -DMERCURY_USE_CHECKSUMS=OFF -DOPA_LIBRARY=/opt/daos/prereq/debug/openpa/lib/libopa.a -DOPA_INCLUDE_DIR=/opt/daos/prereq/debug/openpa/include/ -DCMAKE_INSTALL_PREFIX=/opt/daos/prereq/debug/mercury -DBUILD_EXAMPLES=OFF -DMERCURY_USE_BOOST_PP=ON -DMERCURY_ENABLE_DEBUG=ON -DBUILD_TESTING=OFF -DNA_USE_OFI=ON -DBUILD_DOCUMENTATION=OFF -DBUILD_SHARED_LIBS=ON ../mercury -DOFI_INCLUDE_DIR=/opt/daos/prereq/debug/ofi/include -DOFI_LIBRARY=/opt/daos/prereq/debug/ofi/lib/libfabric.so
+
+
